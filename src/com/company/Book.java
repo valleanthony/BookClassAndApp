@@ -112,6 +112,19 @@ public class Book {
         }
 
 
+        public String bookInStock(){
+
+        if(isInStock == true){
+
+            return "In Stock";
+
+        }
+        else{
+            return "Not in Stock";
+        }
+
+        }
+
     }
 
 
