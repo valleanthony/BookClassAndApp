@@ -1,5 +1,9 @@
 package com.company;
 
+import com.sun.org.apache.xpath.internal.SourceTree;
+
+import java.util.Scanner;
+
 public class Book {
     private String BookTitle;
     private String Author;
@@ -68,12 +72,46 @@ public class Book {
         this.isInStock = isInStock;
     }
 
-    public String getDisplayText(){
-        String Author  = getAuthor();
+    public String getDisplayText() {
+        String Author = getAuthor();
         String Title = getBookTitle();
         String Description = getDescription();
 
-        return  Author+ " " + Title+" " + Description;
+        return Author + " " + Title + " " + Description;
     }
 
-}
+        public double bookCalc(int qtyOfBooks,double priceOfBooks){
+
+            double calc = qtyOfBooks * priceOfBooks;
+
+            return calc ;
+
+
+        }
+
+        public void bookValid(){
+            Scanner keyboard = new Scanner(System.in);
+            boolean inStock = isInStock();
+
+
+            if (inStock == true){
+                System.out.println("Please enter the Qty of books you would like to purchase:");
+                int qtyOfBooks = keyboard.nextInt();
+                keyboard.nextLine();
+                System.out.println("Please enter the price on the book");
+                double priceOfBooks = keyboard.nextDouble();
+                keyboard.nextLine();
+                System.out.println("The price is $" + bookCalc(qtyOfBooks,priceOfBooks));
+
+            }
+
+            else{
+                System.out.println("This book is out of stock");
+            }
+
+        }
+
+
+    }
+
+
