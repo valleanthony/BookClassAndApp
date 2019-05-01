@@ -52,7 +52,10 @@ public class BookDB  extends  Book{
 
         System.out.println("Please enter the SKU:");
         String skuInput = keyboard.nextLine();
+        /*
+        TODO - Fix the If validation. This method should be ignoring upper case letters but it does not work when the user enters the SKU with lowercase.
 
+         */
 
         for (String key:mymap.keySet()){
             if(skuInput.equalsIgnoreCase(key)){
