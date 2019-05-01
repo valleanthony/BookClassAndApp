@@ -49,7 +49,7 @@ public class BookDB  extends  Book{
         mymap.put("Rasp1006",b6);
 
 
-        System.out.println(mymap);
+
         System.out.println("Please enter the SKU:");
         String skuInput = keyboard.nextLine();
 
